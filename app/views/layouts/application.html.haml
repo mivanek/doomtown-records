@@ -8,4 +8,23 @@
     = csrf_meta_tags
 
   %body
+    %header
+      #banner= image_tag "banner.png"
+      #banner-nav
+        = image_tag "banner-nav.png"
+        %a.nav-link.news{ href: "#" }
+        %a.nav-link.releases{ href: "#" }
+        %a.nav-link.bands{ href: "#" }
+        %a.nav-link.media{ href: "#" }
+        .shop-dropdown
+          %a.nav-link.shop{ href: "#" }
+          %a.nav-link.vinyl{ href: "#" }
+          %a.nav-link.cds{ href: "#" }
+          %a.nav-link.tshirts{ href: "#" }
+          %a.nav-link.zines{ href: "#" }
+          %a.nav-link.special{ href: "#" }
+          %a.nav-link.offers{ href: "#" }
+      #shopping-cart-link
+        %a.cart-link{ href: "#" }
+          = image_tag "shopping-cart.png"
     = yield

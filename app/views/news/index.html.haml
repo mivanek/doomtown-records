@@ -1,4 +1,10 @@
-#news-index
-  - @news.each do |news|
-    .title= news.title
-    .news-body= news.body
+#news-index.container
+  #sidebar
+  #news
+    - @news.each do |news|
+      .news-item
+        .news-image
+        .title
+          = news.created_at.strftime("%d.%m.%Y")
+          = news.title
+        .news-body= news.body
