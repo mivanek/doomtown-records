@@ -1,9 +1,18 @@
 #news-index.container
   #sidebar
+    = image_tag "distro-sidebar.png", class: "distro-logo"
+    %a.sidebar-link{ href: "#" } ALL
+    %a.sidebar-link{ href: "#" } VINYL
+    %a.sidebar-link{ href: "#" } CD-s
+    %a.sidebar-link{ href: "#" } TAPES
+    %a.sidebar-link{ href: "#" } T-SHIRTS
+    %a.sidebar-link{ href: "#" } ZINES
+    %a.sidebar-link{ href: "#" } SPECIAL OFFERS
+    = image_tag "latest-releases-sidebar.png", class: "releases-logo"
   #news
     - @news.each do |news|
+      .news-image
       .news-item
-        .news-image
         .title
           = news.created_at.strftime("%d.%m.%Y")
           = news.title
