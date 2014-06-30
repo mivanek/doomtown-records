@@ -1,19 +1,18 @@
+= javascript_include_tag "lightbox.min.js"
+= stylesheet_link_tag "lightbox.css"
+
 #news-index.container
-  #sidebar
-    = image_tag "distro-sidebar.png", class: "distro-logo"
-    %a.sidebar-link{ href: "#" } ALL
-    %a.sidebar-link{ href: "#" } VINYL
-    %a.sidebar-link{ href: "#" } CD-s
-    %a.sidebar-link{ href: "#" } TAPES
-    %a.sidebar-link{ href: "#" } T-SHIRTS
-    %a.sidebar-link{ href: "#" } ZINES
-    %a.sidebar-link{ href: "#" } SPECIAL OFFERS
-    = image_tag "latest-releases-sidebar.png", class: "releases-logo"
+  = render 'shared/sidebar'
+
   #news
-    - @news.each do |news|
-      .news-image
-      .news-item
-        .title
-          = news.created_at.strftime("%d.%m.%Y")
-          = news.title
-        .news-body= news.body
+    - (@news + @news).each do |news|
+      .news-container
+        .news-image
+          = link_to image_path(news_image(news)), data: { lightbox: news_image(news) } do
+            = image_tag news_image news
+        .news-item
+          .title
+            = news.title
+          .news-body= truncate(news.body, length: 700)
+          .read-more
+            = link_to "Read More", news_path(news)

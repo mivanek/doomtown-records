@@ -5,7 +5,11 @@ DoomtownRecords::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'news#index'
 
-  resources :news, :only => [:index]
+  resources :news, :only => [:index, :show]
+  resources :releases, :only => [:index]
+  resources :media, :only => [:index]
+  resources :bands, :only => [:index]
+  resources :shop, :only => [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

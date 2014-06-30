@@ -12,12 +12,12 @@
       #banner= image_tag "banner.png"
       #banner-nav
         = image_tag "banner-nav.png"
-        %a.nav-link.news{ href: "#" }
-        %a.nav-link.releases{ href: "#" }
-        %a.nav-link.bands{ href: "#" }
-        %a.nav-link.media{ href: "#" }
+        = link_to '', news_index_path, class: "nav-link news"
+        = link_to '', releases_path, class: "nav-link releases"
+        = link_to '', bands_path, class: "nav-link bands"
+        = link_to '', media_path, class: "nav-link media"
         .shop-dropdown
-          %a.nav-link.shop{ href: "#" }
+          = link_to '', shop_index_path, class: "nav-link shop"
           %a.nav-link.vinyl{ href: "#" }
           %a.nav-link.cds{ href: "#" }
           %a.nav-link.tshirts{ href: "#" }
@@ -27,4 +27,9 @@
       #shopping-cart-link
         %a.cart-link{ href: "#" }
           = image_tag "shopping-cart.png"
+
     = yield
+
+    .clear-footer
+    %footer
+      #footer-image= image_tag "footer-img.png"

@@ -1,0 +1,15 @@
+= javascript_include_tag "lightbox.min.js"
+= stylesheet_link_tag "lightbox.css"
+
+#news-index.container
+  = render 'shared/sidebar'
+
+  #news
+    .news-container
+      .news-image
+        = link_to image_path(news_image(@news)), data: { lightbox: news_image(@news) } do
+          = image_tag news_image @news
+      .news-item
+        .title
+          = @news.title
+        .news-body= @news.body

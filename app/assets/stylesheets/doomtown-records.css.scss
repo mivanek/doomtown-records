@@ -2,24 +2,38 @@
   font-family: 'kt-typewriter';
   src: font-url('/assets/kingthing_trypewriter_2.ttf') format('truetype');
 }
+
+h1 {
+  font-family: 'kt-typewriter', sans-serif;
+  width: 724px;
+  display: block;
+  text-align: center;
+}
+
 body, body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
-  background: url('/assets/background.png') no-repeat top left;
+  background: url('/assets/background.png') no-repeat top left #000;
   background-size: 100%;
   color: white;
 }
 
 #sidebar {
-  background: url('/assets/sidebar-bg.png') no-repeat top;
+  background: url('/assets/sidebar-bg.png') repeat-y top;
   position: absolute;
   display: inline-block;
   width: 236px;
-  height: 100%;
+  min-height: 100%;
   right: 0;
 }
 
@@ -28,13 +42,36 @@ header {
   position: relative;
 }
 
-header, .container {
+header, footer, .container {
   margin: 0 auto;
   width: 960px;
 }
 
+footer {
+  height: 110px;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  margin-top: -110px;
+}
+
+.clear-footer {
+  height: 110px;
+  clear: both;
+}
+
+#banner {
+  display: block;
+  font-size: 0;
+}
+
 .container {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  height: auto;
   background: #000;
+  padding-bottom: -110px;
 }
 
 #shopping-cart-link {
@@ -69,7 +106,7 @@ header, .container {
   left: 5px;
   width: 38px;
   height: 17px;
-  &:hover, &:active {
+  &:hover, &:active, &.active{
     background: url('/assets/news-active.png') no-repeat;
   }
 }
@@ -79,7 +116,7 @@ header, .container {
   height: 18px;
   top: 4px;
   left: 53px;
-  &:hover, &:active {
+  &:hover, &:active, &.active {
     background: url('/assets/release-active.png') no-repeat;
   }
 }
@@ -89,7 +126,7 @@ header, .container {
   height: 18px;
   top: 4px;
   left: 129px;
-  &:hover, &:active {
+  &:hover, &:active, &.active{
     background: url('/assets/bands-active.png') no-repeat;
   }
 }
@@ -99,7 +136,7 @@ header, .container {
   height: 17px;
   top: 4px;
   left: 233px;
-  &:hover, &:active {
+  &:hover, &:active &.active {
     background: url('/assets/media-active.png') no-repeat;
   }
 }
@@ -109,7 +146,7 @@ header, .container {
   height: 17px;
   top: 3px;
   left: 280px;
-  &:active {
+  &:active, &.active {
     width: 75px;
     background: url('/assets/shop-active.png') no-repeat;
   }
@@ -122,11 +159,6 @@ header, .container {
   width: 75px;
   top: 3px;
   left: 280px;
-}
-
-#banner {
-  display: block;
-  font-size: 0;
 }
 
 
