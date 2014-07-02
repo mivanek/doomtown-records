@@ -136,7 +136,7 @@ footer {
   height: 17px;
   top: 4px;
   left: 233px;
-  &:hover, &:active &.active {
+  &:hover, &:active, &.active {
     background: url('/assets/media-active.png') no-repeat;
   }
 }
