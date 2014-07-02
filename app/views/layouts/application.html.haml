@@ -32,3 +32,22 @@
     .clear-footer
     %footer
       #footer-image= image_tag "footer-img.png"
+      #foooter-mailto
+        .mailto-description
+          = image_tag "mailorder-info.png"
+        .mailto-email
+          = mail_to "doomtownrec@gmail.com" do
+            = image_tag "banner-mailto.png"
+      #footer-links
+        .banner-link
+          = link_to "http://nesto.hr", class: "as" do
+            = image_tag "as-logo.png"
+        .banner-link
+          = link_to "http://www.youtube.com", class: "youtube" do
+            = image_tag "yt-logo.png"
+        .banner-link
+          = link_to "http://www.facebook.com", class: "facebook" do
+            = image_tag "fb-logo.png"
+        .banner-link
+          = link_to "http://www.bandcamp.com", class: "bandcamp" do
+            = image_tag "bandcamp-logo.png"

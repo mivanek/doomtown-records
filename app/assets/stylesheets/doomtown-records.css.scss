@@ -188,3 +188,31 @@ footer {
     background: url('/assets/select-cross.png') no-repeat center;
   }
 }
+
+.mailto-description {
+  position: absolute;
+  margin: 0 auto;
+  left: 295px;
+  top: 23px;
+}
+
+.mailto-email {
+  position: absolute;
+  left: 374px;
+  top: 50px;
+}
+
+#footer-links {
+  position: absolute;
+  right: 20px;
+  top: 38px;
+}
+
+.banner-link {
+  display: inline-block;
+  height: 42px;
+  margin: -1px;
+  img {
+    vertical-align: middle;
+  }
+}

@@ -15,4 +15,4 @@
             = news.title
           .news-body= truncate(news.body, length: 700)
           .read-more
-            = link_to "Read More", news_path(news)
+            = read_more_link(news)
