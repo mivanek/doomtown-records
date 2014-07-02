@@ -12,10 +12,9 @@
       #banner= image_tag "banner.png"
       #banner-nav
         = image_tag "banner-nav.png"
-        = link_to '', news_index_path, class: "nav-link news"
-        = link_to '', releases_path, class: "nav-link releases"
-        = link_to '', bands_path, class: "nav-link bands"
-        = link_to '', media_path, class: "nav-link media"
+        - ["news_index", "releases", "bands", "media"].each do |area|
+          = navigation_links(area)
+
         .shop-dropdown
           = link_to '', shop_index_path, class: "nav-link shop"
           %a.nav-link.vinyl{ href: "#" }
