@@ -1,3 +1,32 @@
+= javascript_include_tag "jquery.raty.js"
+
 .container
   = render 'shared/sidebar'
-  %h1 Coming Soon
+
+  - @releases.each do |release|
+    .release-container
+      .release-cover
+        = link_to release_path(release.id) do
+          = image_tag "/assets/" + release.cover_art
+      .release-info
+        .release-title= release.name
+        .release-format
+          %span.label-field
+            FORMAT:
+          %span.format-field
+            = release.format
+        .release-rating-price
+          .release-rating
+            %span.rating-label.label-field
+              RATING:
+            .raty-rating{ data: { rating: release.rating } }
+          .release-price
+            %span.label-field
+              PRICE:
+            %span.price-label
+              = release.price
+              &euro;
+          .add-to-cart
+            = image_tag 'add-to-cart.png'
+        .find-out-more
+          = link_to "Find out more!", release_path(release.id)

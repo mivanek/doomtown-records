@@ -6,7 +6,7 @@ DoomtownRecords::Application.routes.draw do
   root 'news#index'
 
   resources :news, :only => [:index, :show]
-  resources :releases, :only => [:index]
+  resources :releases, :only => [:show, :index]
   resources :media, :only => [:index]
   resources :bands, :only => [:index]
   resources :shop, :only => [:index]

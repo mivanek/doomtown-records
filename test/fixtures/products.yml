@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  format: MyString
+  genre: MyString
+  style: MyString
+  label: MyString
+  release_date: 2014-07-02
+  style: MyString
+  review: MyString
+  rating: 1
+  price_in_cents: 1
+  doomtown_release: false
+  band_id: 1
+
+two:
+  name: MyString
+  format: MyString
+  genre: MyString
+  style: MyString
+  label: MyString
+  release_date: 2014-07-02
+  style: MyString
+  review: MyString
+  rating: 1
+  price_in_cents: 1
+  doomtown_release: false
+  band_id: 1

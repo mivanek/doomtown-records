@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630174333) do
+ActiveRecord::Schema.define(version: 20140702121505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,24 @@ ActiveRecord::Schema.define(version: 20140630174333) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_path"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.string   "format"
+    t.string   "genre"
+    t.string   "style"
+    t.string   "label"
+    t.text     "review"
+    t.decimal  "rating",             precision: 2, scale: 1
+    t.integer  "price_in_cents"
+    t.boolean  "doomtown_release"
+    t.integer  "band_id"
+    t.string   "bandcamp_embed_url"
+    t.string   "cover_art"
+    t.date     "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
