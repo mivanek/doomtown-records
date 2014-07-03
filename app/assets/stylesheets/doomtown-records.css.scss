@@ -1,3 +1,15 @@
+/* preload images */
+
+$price: #BB9C70;
+
+body:after {
+  display: none;
+  content: url('/assets/select-cross.png') url('/assets/shop-active.png')
+  url('/assets/media-active.png') url('/assets/bands-active.png')
+  url('/assets/release-active.png') url('/assets/news-active.png')
+  url('/assets/background.png') url('/assets/sidebar-bg.png');
+}
+
 @font-face {
   font-family: 'kt-typewriter';
   src: font-url('/assets/kingthing_trypewriter_2.ttf') format('truetype');
@@ -111,6 +123,15 @@ footer {
     background: url('/assets/news-active.png') no-repeat;
   }
 }
+
+.highlighted {
+  font-family: 'kt-typewriter', sans-serif;
+  background: white;
+  color: black;
+  height: 21px;
+  line-height: 21px;
+}
+
 
 .releases {
   width: 70px;

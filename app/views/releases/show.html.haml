@@ -1,0 +1,83 @@
+= javascript_include_tag "jquery.raty.js"
+.container.show-release
+  = render 'shared/sidebar'
+
+  .back-and-view-all
+    .back-button
+      = link_to releases_path do
+        = image_tag "back.png"
+
+    .view-all-button
+      = link_to "" do
+        = image_tag "view-all.png"
+
+  .release-left
+    .release-album-cover
+      = image_tag "/assets" + @release.cover_art
+    .release-rating
+      %span.rating-label.label-field
+        RATING:
+      .raty-rating{ data: { rating: @release.rating } }
+    .release-share
+      = link_to '', "http://www.twitter.com/share?url=#{request.original_url}", class: "twitter-share"
+      = link_to '', "http://plus.google.com/share?url=#{request.original_url}", class: "gplus-share"
+      = link_to '', "http://www.facebook.com/sharer.php?u=#{request.original_url}", class: "fb-share"
+      = image_tag "release-share.png"
+      = image_tag "fb-share-hover.png", class: "hover-share fb"
+      = image_tag "twitter-share-hover.png", class: "hover-share twitter"
+      = image_tag "gplus-share-hover.png", class: "hover-share gplus"
+    .release-wishlist
+      = link_to '#' do
+        = image_tag "release-wishlist.png"
+    .release-listen
+      = image_tag "release-listen.png"
+  .release-right
+    .release-details-title.highlighted= @release.name
+    .release-details-format
+      %span.highlighted
+        FORMAT:
+      %span.detail-value
+        = @release.format
+    .release-details-label
+      %span.highlighted
+        LABEL:
+      %span.detail-value
+        = @release.label
+    .release-details-country
+      %span.highlighted
+        COUNTRY:
+      %span.detail-value
+        N/A
+        -# = @release.country
+    .release-details-release-date
+      %span.highlighted
+        RELEASED:
+      %span.detail-value
+        = @release.release_date || "N/A"
+    .release-details-genre
+      %span.highlighted
+        GENRE:
+      %span.detail-value
+        = @release.genre
+    .release-details-style
+      %span.highlighted
+        STYLE:
+      %span.detail-value
+        = @release.style
+    .price-and-cart
+      .release-details-price
+        %span.highlighted
+          PRICE:
+        %span.detail-value.price
+          = @release.price
+          &euro;
+      .release-details-cart
+        = link_to "" do
+          = image_tag "add-to-cart.png"
+    .release-details-review
+      .highlighted Review
+      .review-text
+        = simple_format(@release.review) || "The review is currently not available."
+      .about-link
+        = link_to "" do
+          = image_tag "about-band.png"
