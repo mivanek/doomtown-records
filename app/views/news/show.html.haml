@@ -12,4 +12,4 @@
       .news-item
         .title
           = @news.title
-        .news-body= @news.body
+        .news-body= simple_format(@news.body)

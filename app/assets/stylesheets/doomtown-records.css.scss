@@ -7,7 +7,9 @@ body:after {
   content: url('/assets/select-cross.png') url('/assets/shop-active.png')
   url('/assets/media-active.png') url('/assets/bands-active.png')
   url('/assets/release-active.png') url('/assets/news-active.png')
-  url('/assets/background.png') url('/assets/sidebar-bg.png');
+  url('/assets/background.png') url('/assets/sidebar-bg.png')
+  url('/assets/lastfm-hover') url('/assets/yt-hover.png')
+  url('/assets/fb-hover.png') url('/assets/bc-hover.png');
 }
 
 @font-face {
@@ -39,6 +41,11 @@ body {
   background-size: 100%;
   color: white;
 }
+
+p {
+  margin-bottom: 15px;
+}
+
 
 #sidebar {
   background: url('/assets/sidebar-bg.png') repeat-y top;
@@ -225,16 +232,73 @@ footer {
 }
 
 #footer-links {
+  background: url('/assets/footer-links-bg.png') no-repeat;
   position: absolute;
   right: 20px;
-  top: 38px;
+  top: 27px;
+  width: 151px;
+  height: 49px;
 }
 
 .banner-link {
   display: inline-block;
-  height: 42px;
-  margin: -1px;
   img {
     vertical-align: middle;
+  }
+}
+
+.lastfm {
+  position: absolute;
+  height: 25px;
+  width: 34px;
+  left: 6px;
+  top: 13px;
+  &:hover {
+    background: url('/assets/lastfm-hover.png') no-repeat;
+    > img {
+      display: none;
+    }
+  }
+}
+
+.youtube {
+  position: absolute;
+  width: 46px;
+  height: 38px;
+  left: 40px;
+  top: 6px;
+  &:hover {
+    background: url('/assets/yt-hover.png') no-repeat;
+    > img {
+      display: none;
+    }
+  }
+}
+
+.facebook {
+  position: absolute;
+  width: 20px;
+  height: 31px;
+  left: 87px;
+  top: 12px;
+  &:hover {
+    background: url('/assets/fb-hover.png') no-repeat;
+    > img {
+      display: none;
+    }
+  }
+}
+
+.bandcamp {
+  position: absolute;
+  width: 33px;
+  height: 29px;
+  left: 109px;
+  top: 13px;
+  &:hover {
+    background: url('/assets/bc-hover.png') no-repeat;
+    > img {
+      display: none;
+    }
   }
 }

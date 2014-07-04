@@ -5,7 +5,9 @@ module NewsHelper
 
   def read_more_link(news)
     if news.body.length > 700
-      link_to "Read More", news_path(news)
+      link_to news_path(news) do
+        image_tag "read-more.png"
+      end
     end
   end
 end
