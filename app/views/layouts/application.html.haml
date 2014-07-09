@@ -15,14 +15,23 @@
         - ["news_index", "releases", "bands", "media"].each do |area|
           = navigation_links(area)
 
-        .shop-dropdown
-          = link_to '', shop_index_path, class: "nav-link shop"
-          %a.nav-link.vinyl{ href: "#" }
-          %a.nav-link.cds{ href: "#" }
-          %a.nav-link.tshirts{ href: "#" }
-          %a.nav-link.zines{ href: "#" }
-          %a.nav-link.special{ href: "#" }
-          %a.nav-link.offers{ href: "#" }
+        .shop-container
+          .shop-dropdown
+            = link_to shop_index_path(filter: "all"), class: "nav-link shop" do
+              = image_tag 'select-cross.png', class: "banner-select"
+            = link_to shop_index_path(filter: "vinyl"), class: "nav-link vinyl" do
+              = image_tag 'select-cross.png', class: "banner-select"
+            = link_to shop_index_path(filter: "cd"), class: "nav-link cd" do
+              = image_tag 'select-cross.png', class: "banner-select"
+            = link_to shop_index_path(filter: "cs"), class: "nav-link tapes" do
+              = image_tag 'select-cross.png', class: "banner-select"
+            = link_to shop_index_path(filter: "shirts"), class: "nav-link shirts" do
+              = image_tag 'select-cross.png', class: "banner-select"
+            = link_to shop_index_path(filter: "zines"), class: "nav-link zines" do
+              = image_tag 'select-cross.png', class: "banner-select"
+            = link_to shop_index_path(filter: "special"), class: "nav-link special-offers" do
+              = image_tag 'select-cross.png', class: "banner-select"
+
       #shopping-cart-link
         %a.cart-link{ href: "#" }
           = image_tag "shopping-cart.png"

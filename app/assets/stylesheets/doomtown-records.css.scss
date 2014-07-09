@@ -56,11 +56,6 @@ p {
   right: 0;
 }
 
-header {
-  height: 144px;
-  position: relative;
-}
-
 header, footer, .container {
   margin: 0 auto;
   width: 960px;
@@ -79,56 +74,14 @@ footer {
   clear: both;
 }
 
-#banner {
-  display: block;
-  font-size: 0;
-}
-
 .container {
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   height: 100%;
   min-height: 100%;
   height: auto;
   background: #000;
-  padding-bottom: -110px;
-}
-
-#shopping-cart-link {
-  position: absolute;
-  height: 25px;
-  right: 82px;
-  bottom: 10px;
-}
-
-#banner-nav {
-  position: absolute;
-  display: block;
-  z-index: 1;
-  width: 348px;
-  height: 25px;
-  bottom: 10px;
-}
-
-#banner-nav img {
-  display: block;
-  z-index: 1;
-}
-
-.nav-link {
-  position: absolute;
-  display: inline-block;
-  z-index: 100;
-}
-
-.news {
-  top: 4px;
-  left: 5px;
-  width: 38px;
-  height: 17px;
-  &:hover, &:active, &.active{
-    background: url('/assets/news-active.png') no-repeat;
-  }
+  padding-bottom: 30px;
 }
 
 .highlighted {
@@ -140,68 +93,6 @@ footer {
 }
 
 
-.releases {
-  width: 70px;
-  height: 18px;
-  top: 4px;
-  left: 53px;
-  &:hover, &:active, &.active {
-    background: url('/assets/release-active.png') no-repeat;
-  }
-}
-
-.bands {
-  width: 104px;
-  height: 18px;
-  top: 4px;
-  left: 129px;
-  &:hover, &:active, &.active{
-    background: url('/assets/bands-active.png') no-repeat;
-  }
-}
-
-.media {
-  width: 52px;
-  height: 17px;
-  top: 4px;
-  left: 233px;
-  &:hover, &:active, &.active {
-    background: url('/assets/media-active.png') no-repeat;
-  }
-}
-
-.shop {
-  width: 43px;
-  height: 17px;
-  top: 3px;
-  left: 280px;
-  &:active, &.active {
-    width: 75px;
-    background: url('/assets/shop-active.png') no-repeat;
-  }
-}
-
-.shop-dropdown:hover {
-  position: absolute;
-  background: url('/assets/shop-active.png') no-repeat;
-  height: 137px;
-  width: 75px;
-  top: 3px;
-  left: 280px;
-}
-
-
-.distro-logo {
-  display: block;
-  margin-left: 80px;
-  margin-top: 30px;
-}
-
-.releases-logo {
-  display: block;
-  margin-left: 60px;
-  margin-top: 30px;
-}
 
 .sidebar-link {
   font-size: 14px;

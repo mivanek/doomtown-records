@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ready = function() {
   $('.raty-rating').raty({
     score: function() {
       return $(this).attr('data-rating')
@@ -8,4 +8,7 @@ $(document).ready(function() {
     starOn: "/assets/star.png",
     starOff:"/assets/empty-star.png"
   });
-});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
