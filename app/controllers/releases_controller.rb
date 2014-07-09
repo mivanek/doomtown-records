@@ -1,9 +1,9 @@
 class ReleasesController < ApplicationController
   def index
-    @releases = Products.doomtown_products
+    @releases = Product.doomtown_products
   end
 
   def show
-    @release = Products.find(params[:id])
+    @release = Product.find(params[:id])
   end
 end

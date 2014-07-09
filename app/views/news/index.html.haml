@@ -5,7 +5,7 @@
   = render 'shared/sidebar'
 
   #news
-    - (@news + @news).each do |news|
+    - @news.each do |news|
       .news-container
         .news-image
           = link_to image_path(news_image(news)), data: { lightbox: news_image(news) } do

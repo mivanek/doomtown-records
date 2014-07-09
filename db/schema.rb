@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702121505) do
+ActiveRecord::Schema.define(version: 20140709095839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bands", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image"
+    t.string   "email"
+    t.string   "lastfm"
+    t.string   "bandcamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news", force: true do |t|
     t.string   "title"
@@ -38,6 +49,17 @@ ActiveRecord::Schema.define(version: 20140702121505) do
     t.string   "bandcamp_embed_url"
     t.string   "cover_art"
     t.date     "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "band_name"
+  end
+
+  create_table "shows", force: true do |t|
+    t.string   "club_name"
+    t.string   "city"
+    t.string   "country"
+    t.date     "date"
+    t.integer  "band_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

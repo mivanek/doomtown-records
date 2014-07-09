@@ -1,3 +1,31 @@
 .container
   = render 'shared/sidebar'
-  %h1 Coming Soon
+  .bands-index
+    - @bands.each do |band|
+      .band
+        .image-col
+          = image_tag band.band_image
+        .info-col
+          .band-name.highlighted
+            = band.name
+          .discography
+            %span.highlighted
+              Discography:
+            %span.discography-list
+              = band.discography
+            .discography-covers
+              - band.album_images.each do |album_cover|
+                .cover= image_tag album_cover
+          .shows
+            %span.highlighted.shows
+              Shows:
+            %span.show-list
+              - band.show_dates.each do |date_string|
+                .show= date_string
+
+          .description
+            %span.description-title.highlighted
+              BRIEF DESCRIPTION:
+            .description-text
+              = simple_format(band.description)
+

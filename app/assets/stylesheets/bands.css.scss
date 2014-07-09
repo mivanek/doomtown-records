@@ -1,0 +1,83 @@
+.bands-index {
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+.bands-index .band .image-col {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  img {
+    display: block;
+    max-width: 140px;
+    max-height: 140px;
+    margin: 0 auto;
+  }
+}
+
+.band {
+  margin-bottom: 15px;
+}
+
+.bands-index .info-col {
+  display: inline-block;
+  vertical-align: top;
+  width: 534px;
+  .band-name {
+    padding-left: 5px;
+    font-size: 13px;
+  }
+}
+
+.discography .highlighted {
+  margin-top: 8px;
+  padding-left: 5px;
+  font-size: 13px;
+  width: 102px;
+}
+
+.discography-list {
+  font-size: 12px;
+}
+
+.discography-covers {
+  margin-top: 7px;
+}
+
+.cover {
+  display: inline-block;
+  margin-right: 7px;
+  width: 79px;
+  height: 81px;
+  img {
+    max-width: 79px;
+    max-height: 81px;
+  }
+}
+
+.shows {
+  vertical-align: top;
+}
+
+.show-list {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.show {
+  font-size: 12px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.description-title {
+  display: inline-block;
+  width: 150px !important;
+}
+
+.description-text {
+  margin-top: 10px;
+  font-size: 12px;
+}

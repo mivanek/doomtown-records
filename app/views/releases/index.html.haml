@@ -7,9 +7,9 @@
     .release-container
       .release-cover
         = link_to release_path(release.id) do
-          = image_tag "/assets/" + release.cover_art
+          = image_tag release.product_image
       .release-info
-        .release-title= release.name
+        .release-title= release.full_name
         .release-format
           %span.label-field
             FORMAT:
