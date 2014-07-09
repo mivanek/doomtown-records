@@ -1,0 +1,197 @@
+header {
+  height: 144px;
+  position: relative;
+}
+
+#banner {
+  display: block;
+  font-size: 0;
+}
+
+#shopping-cart-link {
+  position: absolute;
+  height: 25px;
+  right: 82px;
+  bottom: 10px;
+}
+
+#banner-nav {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  width: 348px;
+  height: 25px;
+  bottom: 10px;
+}
+
+#banner-nav img {
+  display: block;
+  z-index: 1;
+}
+
+.nav-link {
+  position: absolute;
+  display: inline-block;
+  z-index: 100;
+}
+
+.news {
+  top: 4px;
+  left: 5px;
+  width: 38px;
+  height: 17px;
+  &:hover, &:active, &.active{
+    background: url('/assets/news-active.png') no-repeat;
+  }
+}
+
+.releases {
+  width: 70px;
+  height: 18px;
+  top: 4px;
+  left: 53px;
+  &:hover, &:active, &.active {
+    background: url('/assets/release-active.png') no-repeat;
+  }
+}
+
+.bands {
+  width: 104px;
+  height: 18px;
+  top: 4px;
+  left: 129px;
+  &:hover, &:active, &.active{
+    background: url('/assets/bands-active.png') no-repeat;
+  }
+}
+
+.media {
+  width: 52px;
+  height: 17px;
+  top: 4px;
+  left: 233px;
+  &:hover, &:active, &.active {
+    background: url('/assets/media-active.png') no-repeat;
+  }
+}
+
+.shop-container {
+  width: 44px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 293px;
+  &:hover > .shop-dropdown {
+    display: block;
+  }
+}
+
+.shop-dropdown > a {
+  display: table-cell;
+}
+
+.shop-dropdown {
+  display: none;
+  img {
+    display: none !important;
+    position: absolute;
+    margin: auto;
+    z-index: -1 !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.shop {
+  width: 44px;
+  height: 16px;
+  background: url('/assets/shop-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.vinyl {
+  height: 16px;
+  width: 50px;
+  top: 16px;
+  left: -2px;
+  background: url('/assets/vinyl-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.cd {
+  height: 17px;
+  width: 52px;
+  top: 32px;
+  left: -3px;
+  background: url('/assets/cd-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.tapes {
+  height: 17px;
+  width: 75px;
+  top: 49px;
+  left: -14px;
+  background: url('/assets/tapes-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.shirts {
+  height: 17px;
+  width: 75px;
+  top: 66px;
+  left: -14px;
+  background: url('/assets/tshirts-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.zines {
+  height: 17px;
+  width: 74px;
+  top: 83px;
+  left: -14px;
+  background: url('/assets/zines-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.special-offers {
+  height: 37px;
+  width: 71px;
+  top: 100px;
+  left: -13px;
+  background: url('/assets/spec-offers-white.png') no-repeat;
+  &:hover img {
+    display: block !important;
+  }
+}
+
+.distro-logo {
+  display: block;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.releases-logo {
+  display: block;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.banner-select {
+  margin: 0 auto;
+  width: 20px;
+}
