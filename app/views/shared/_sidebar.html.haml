@@ -1,10 +1,12 @@
 #sidebar
   = image_tag "distro-sidebar.png", class: "distro-logo"
-  %a.sidebar-link{ href: "#" } ALL
-  %a.sidebar-link{ href: "#" } VINYL
-  %a.sidebar-link{ href: "#" } CD-s
-  %a.sidebar-link{ href: "#" } TAPES
-  %a.sidebar-link{ href: "#" } T-SHIRTS
-  %a.sidebar-link{ href: "#" } ZINES
-  %a.sidebar-link{ href: "#" } SPECIAL OFFERS
+
+  = link_to "ALL",            shop_index_path,                    class: "sidebar-link"
+  = link_to "VINYL",          shop_index_path(filter: "vinyl"),   class: "sidebar-link"
+  = link_to "CD-s",           shop_index_path(filter: "cd"),      class: "sidebar-link"
+  = link_to "TAPES",          shop_index_path(filter: "cs"),      class: "sidebar-link"
+  = link_to "T-SHIRTS",       shop_index_path(filter: "shirts"),  class: "sidebar-link"
+  = link_to "ZINES",          shop_index_path(filter: "zines"),   class: "sidebar-link"
+  = link_to "SPECIAL OFFERS", shop_index_path(filter: "special"), class: "sidebar-link"
+
   = image_tag "latest-releases-sidebar.png", class: "releases-logo"

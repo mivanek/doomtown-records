@@ -27,7 +27,7 @@
             .line-item-price
               %span.label-field
                 PRICE:
-              %span.price-label
+              %span.cart.price-label
                 = line_item.product.price * line_item.quantity
                 &euro;
             .line-item-remove
@@ -38,7 +38,7 @@
     .price-total
       %span.label-field
         TOTAL:
-      %span.price-label
+      %span.cart.price-label
         = @cart.total_price
         &euro;
     .check-out
