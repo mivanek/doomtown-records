@@ -33,7 +33,8 @@
               = image_tag 'select-cross.png', class: "banner-select"
 
       #shopping-cart-link
-        %a.cart-link{ href: "#" }
+        -# %a.cart-link{ href: "#" }
+        = link_to cart_path(@cart.id) do
           = image_tag "shopping-cart.png"
 
     = yield

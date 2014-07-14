@@ -27,6 +27,7 @@
               = release.price
               &euro;
           .add-to-cart
-            = image_tag 'add-to-cart.png'
+            = link_to line_items_path(product_id: release.id), method: :post do
+              = image_tag 'add-to-cart.png'
         .find-out-more
           = link_to "Find out more!", release_path(release.id)

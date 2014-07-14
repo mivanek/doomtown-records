@@ -10,6 +10,8 @@ DoomtownRecords::Application.routes.draw do
   resources :media, :only => [:index]
   resources :bands, :only => [:index]
   resources :shop, :only => [:index]
+  resources :cart, :only => [:show, :destroy]
+  resources :line_items, :only => [:create, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

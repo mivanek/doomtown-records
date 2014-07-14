@@ -1,0 +1,45 @@
+.container.shopping-cart
+  = render 'shared/sidebar'
+  .continue-shopping
+    = link_to @previous_location do
+      = image_tag "continue-shopping.png"
+  - if @line_items.blank?
+    .empty-cart-message
+      = image_tag "empty-shopping-cart.png"
+  - else
+    - @line_items.each do |line_item|
+      .cart-container
+        .line-item-cover
+          = image_tag line_item.product.product_image
+        .line-item-info
+          .line-item-title= line_item.product.full_name
+          .line-item-format
+            %span.label-field
+              FORMAT:
+            %span.format-field
+              = line_item.product.format
+          .line-item-rating-price
+            .line-item-quantity
+              %span.line-item-quantity.label-field
+                QUANTITY:
+              .quantity
+                = line_item.quantity
+            .line-item-price
+              %span.label-field
+                PRICE:
+              %span.price-label
+                = line_item.product.price * line_item.quantity
+                &euro;
+            .line-item-remove
+              = link_to line_item_path(product_id: line_item.product_id), method: :delete do
+                = image_tag 'remove-from-cart.png'
+
+    %hr.price-border
+    .price-total
+      %span.label-field
+        TOTAL:
+      %span.price-label
+        = @cart.total_price
+        &euro;
+    .check-out
+      = image_tag 'check-out.png'

@@ -47,8 +47,7 @@
       %span.highlighted
         COUNTRY:
       %span.detail-value
-        N/A
-        -# = @release.country
+        = @release.try(:country) || "N/A"
     .release-details-release-date
       %span.highlighted
         RELEASED:
@@ -72,7 +71,7 @@
           = @release.price
           &euro;
       .release-details-cart
-        = link_to "" do
+        = link_to line_items_path(product_id: @release.id), method: :post do
           = image_tag "add-to-cart.png"
     .release-details-review
       .highlighted Review

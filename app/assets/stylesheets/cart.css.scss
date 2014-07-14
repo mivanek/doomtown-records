@@ -1,0 +1,148 @@
+$price: #BB9C70;
+
+.cart-container {
+  width: 680px;
+  margin-left: 24px;
+  margin-top: 20px;
+  height: 141px;
+}
+
+.line-item-cover {
+  display: inline-block;
+  width: 141px;
+  height: 141px;
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 141px;
+    max-height: 141px;
+  }
+}
+
+.line-item-info {
+  display: inline-block;
+  vertical-align: middle;
+  height: 143px;
+  position: relative;
+  width: 534px;
+  vertical-align: top;
+}
+
+.line-item-title {
+  background: #FFF;
+  color: #000;
+  font-family: 'kt-typewriter', sans-serif;
+  height: 21px;
+  line-height: 21px;
+  width: 100%;
+  margin-bottom: 6px;
+  padding-left: 2px;
+  font-size: 13px;
+}
+
+.label-field {
+  display: inline-block;
+  height: 21px;
+  line-height: 21px;
+  background: #FFF;
+  color: #000;
+  width: 64px;
+  font-family: 'kt-typewriter', sans-serif;
+  padding-left: 2px;
+  font-size: 12px;
+}
+
+.format-field {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.line-item-quantity, .line-item-quantity * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.quantity {
+  font-size: 12px;
+  line-height: 21px;
+  margin-left: 5px;
+}
+
+.line-item-rating-price {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  * {
+    vertical-align: bottom;
+    margin-top: 11px;
+    display: inline-block;
+  }
+}
+
+.line-item-rating {
+  img {
+    margin-right: 4px;
+  }
+}
+
+.line-item-left {
+  width: 248px;
+  margin-right: 9px;
+  .line-item-rating {
+    margin-top: 7px;
+  }
+  .rating-label {
+    margin-right: 10px;
+  }
+}
+
+.line-item-price {
+  display: inline-block;
+  line-height: 21px;
+  margin-left: 10px;
+}
+
+.price-label {
+  margin-left: 5px;
+}
+
+.line-item-remove {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.empty-cart-message {
+  margin: 50px 170px;
+}
+
+.continue-shopping {
+  position: absolute;
+  right: 220px;
+  top: 20px;
+}
+
+.container.shopping-cart {
+  padding-top: 40px;
+}
+
+.price-border {
+  margin-top: 15px;
+  margin-left: 24px;
+  width: 680px;
+}
+
+.price-total {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 171px;
+  vertical-align: top;
+}
+
+.check-out {
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 343px;
+}
