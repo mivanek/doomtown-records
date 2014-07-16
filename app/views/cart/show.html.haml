@@ -24,11 +24,17 @@
                 QUANTITY:
               .quantity
                 = line_item.quantity
+              .quantity-increment
+                = link_to increase_quantity_cart_path(line_item_id: line_item.id), method: :post do
+                  = image_tag 'increment.png'
+              .quantity-decrement
+                = link_to reduce_quantity_cart_path(line_item_id: line_item.id), method: :post do
+                  = image_tag 'decrement.png'
             .line-item-price
               %span.label-field
                 PRICE:
               %span.cart.price-label
-                = line_item.product.price * line_item.quantity
+                = line_item.total_price
                 &euro;
             .line-item-remove
               = link_to line_item_path(product_id: line_item.product_id), method: :delete do

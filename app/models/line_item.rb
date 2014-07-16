@@ -5,4 +5,8 @@ class LineItem < ActiveRecord::Base
   def price
     product.price
   end
+
+  def total_price
+    product.price * quantity
+  end
 end
