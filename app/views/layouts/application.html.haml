@@ -13,10 +13,10 @@
       #banner-nav
         = image_tag "banner-nav.png"
         - ["news_index", "releases", "bands", "media"].each do |area|
-          = navigation_links(area)
+          = navigation_link(area)
 
         .shop-container
-          .shop-dropdown
+          = shop_navigation_link do
             = link_to shop_index_path, class: "nav-link shop" do
               = image_tag 'select-cross.png', class: "banner-select"
             = link_to shop_index_path(filter: "vinyl"), class: "nav-link vinyl" do
@@ -33,7 +33,6 @@
               = image_tag 'select-cross.png', class: "banner-select"
 
       #shopping-cart-link
-        -# %a.cart-link{ href: "#" }
         = link_to cart_path(@cart.id) do
           = image_tag "shopping-cart.png"
 

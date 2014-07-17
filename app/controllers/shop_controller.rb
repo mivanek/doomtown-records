@@ -1,9 +1,11 @@
 class ShopController < ApplicationController
   def index
-    if params[:filter]
-      @releases = Product.where("format = ?", params[:filter].downcase)
+    if params[:filter] == "all"
+      @releases = Product.doomtown_products.order(params[:sort_by])
+    elsif params[:filter] || params[:sort_by]
+      @releases = Product.doomtown_products.where('format = ?', params[:filter]).order(params[:sort_by])
     else
-      @releases = Product.all
+      @releases = Product.doomtown_products.order('release_date ASC')
     end
     render 'releases/index'
   end
