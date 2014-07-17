@@ -3,6 +3,10 @@
 .container
   = render 'shared/sidebar'
   .search-filter
+    .search-field
+      = form_tag search_path_string, method: 'get', id: 'search' do
+        = search_field_tag 'search'
+        = submit_tag ''
     .filter-sort-by
       = form_tag request.path, method: 'get', id: "filter-sort-form" do
         = select_tag "filter", options_for_select(filter_options, params[:filter]), class: "filter-select"

@@ -19,4 +19,12 @@ module ApplicationHelper
       end
     end
   end
+
+  def search_path_string
+    if request.path.include? "search"
+      request.path
+    else
+      request.path + "/search"
+    end
+  end
 end

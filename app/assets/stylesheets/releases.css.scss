@@ -328,3 +328,29 @@ span.highlighted {
   font-family: 'kt-typewriter', sans-serif;
   padding-top: 1px;
 }
+
+.search-field {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  background: url('/assets/search.png') no-repeat;
+  width: 233px;
+  height: 28px;
+  input {
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+    border: 0;
+  }
+  input[type="submit"] {
+    position: absolute;
+    width: 41px;
+    height: 27px;
+    bottom: -1px;
+    left: 195px;
+    background-color: transparent;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
