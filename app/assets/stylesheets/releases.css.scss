@@ -285,3 +285,46 @@ span.highlighted {
 .view-all-button, .back-button {
   display: inline-block;
 }
+
+.search-filter {
+  position: relative;
+  width: 750px;
+  height: 50px;
+}
+
+.filter-sort-by {
+  background: url('/assets/sort-filter.png') no-repeat;
+  position: absolute;
+  width: 380px;
+  height: 26px;
+  right: 0;
+  bottom: 0;
+}
+
+.filter-select {
+  position: absolute;
+  width: 111px;
+  height: 18px;
+  background: #000;
+  color: #FFF;
+  font-size: 12px;
+  top: 5px;
+  left: 65px;
+  border: 0;
+  font-family: 'kt-typewriter', sans-serif;
+  padding-top: 1px;
+}
+
+.sort-by-select {
+  position: absolute;
+  width: 129px;
+  height: 18px;
+  background: #000;
+  color: #FFF;
+  font-size: 12px;
+  top: 6px;
+  left: 248px;
+  border: 0;
+  font-family: 'kt-typewriter', sans-serif;
+  padding-top: 1px;
+}

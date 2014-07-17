@@ -2,6 +2,11 @@
 
 .container
   = render 'shared/sidebar'
+  .search-filter
+    .filter-sort-by
+      = form_tag releases_path, method: 'get', id: "filter-sort-form" do
+        = select_tag "filter", options_for_select(filter_options, params[:filter]), class: "filter-select"
+        = select_tag "sort_by", options_for_select(sort_by_options, params[:sort_by]), class: "sort-by-select"
 
   - @releases.each do |release|
     .release-container

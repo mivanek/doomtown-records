@@ -8,6 +8,10 @@ ready = function() {
     starOn: "/assets/star.png",
     starOff:"/assets/empty-star.png"
   });
+
+  $('.filter-select, .sort-by-select').change(function() {
+    $('#filter-sort-form').submit();
+  });
 };
 
 $(document).ready(ready);
