@@ -11,6 +11,7 @@ class ReleasesController < ApplicationController
 
   def show
     @release = Product.find(params[:id])
+    gon.bandcamp_id = @release.bandcamp_id
   end
 
   def search

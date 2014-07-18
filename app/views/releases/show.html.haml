@@ -30,8 +30,10 @@
       = link_to '#' do
         = image_tag "release-wishlist.png"
     .release-listen
-      = image_tag "release-listen.png"
+      - unless @release.bandcamp_id.blank?
+        = image_tag "release-listen.png"
   .release-right
+    .bandcamp-player
     .release-details-title.highlighted= @release.name
     .release-details-format
       %span.highlighted

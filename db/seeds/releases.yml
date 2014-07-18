@@ -12,6 +12,7 @@ Trobecove Krušne Peći:
     doomtown_release: true
     cover_art: tkp-trubadur.jpg
     release_date: 25-03-2013
+    bandcamp_id: "2277218679"
 Amoebas:
   S/T:
     format: cd
@@ -35,6 +36,7 @@ Estranged:
     doomtown_release: true
     cover_art: estranged-static-thoughts.jpg
     release_date: 01-10-2009
+    bandcamp_id: "2708987171"
 Black Gust:
   Psychedelic Maelstorm 7":
     format: vinyl
@@ -47,6 +49,7 @@ Black Gust:
     doomtown_release: true
     cover_art: black-gust-pm7in.jpg
     release_date: 01-03-2013
+    bandcamp_id: "2455799208"
 Modern Delusion:
   Wasteland:
     format: cs
@@ -59,6 +62,7 @@ Modern Delusion:
     doomtown_release: true
     cover_art: moderndelusion-wasteland.jpg
     release_date: 14-02-2014
+    bandcamp_id: "109013061"
 Brat Pack:
   Hate the Neighbours:
     format: cd
@@ -71,6 +75,7 @@ Brat Pack:
     doomtown_release: true
     cover_art: bp-htn.png
     release_date: 20-05-2008
+    bandcamp_id: "4138665387"
   Stupidity Returns:
     format: cd
     genre: Punk
@@ -82,3 +87,4 @@ Brat Pack:
     doomtown_release: true
     cover_art: bp-sr.jpg
     release_date: 13-05-2011
+    bandcamp_id: "1978268514"

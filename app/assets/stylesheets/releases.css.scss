@@ -170,7 +170,7 @@ body:after {
   height: 19px;
   width: 68px;
   overflow: hidden;
-  &:hover {
+  &:hover, &.active {
     padding-left: 68px;
     background: url('/assets/release-listen-hover.png') no-repeat left;
   }
@@ -354,3 +354,13 @@ span.highlighted {
     }
   }
 }
+
+.bandcamp-player {
+  // display: none;
+}
+
+// iframe {
+//   width: 423px;
+//   height: 472px;
+//   border: 0;
+// }
