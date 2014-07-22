@@ -2,7 +2,7 @@
   = render 'shared/sidebar'
   .bands-index
     - @bands.each do |band|
-      .band
+      .band{ id: band.name.parameterize }
         .image-col
           = image_tag band.band_image
         .info-col

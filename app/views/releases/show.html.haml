@@ -80,5 +80,5 @@
       .review-text
         = simple_format(@release.review) || "The review is currently not available."
       .about-link
-        = link_to "" do
+        = link_to bands_path(anchor: @release.band_name.parameterize) do
           = image_tag "about-band.png"

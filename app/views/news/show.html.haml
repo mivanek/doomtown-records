@@ -13,3 +13,7 @@
         .title
           = @news.title
         .news-body= simple_format(@news.body)
+
+        .news-back
+          = link_to news_index_path do
+            = image_tag 'back.png'
