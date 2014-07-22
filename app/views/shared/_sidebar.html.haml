@@ -10,3 +10,12 @@
   = link_to "SPECIAL OFFERS", shop_index_path(filter: "special"), class: "sidebar-link"
 
   = image_tag "latest-releases-sidebar.png", class: "releases-logo"
+  - @latest_releases.each do |latest_release|
+    .latest-releases
+      = link_to release_path(latest_release), target: "_blank" do
+        .latest-release-band
+          = latest_release.band_name
+        .latest-releases-album
+          = latest_release.name
+        .latest-releases-cover
+          = image_tag latest_release.product_image

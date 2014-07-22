@@ -57,6 +57,34 @@ p {
   right: 0;
 }
 
+.latest-releases {
+  padding-top: 20px;
+  padding-left: 40px;
+  color: #000;
+  font-size: 13px;
+  > * {
+    text-align: center;
+    text-decoration: none;
+  }
+  *:link, *:visited {
+    color: #000;
+  }
+  .latest-releases-album {
+    font-style: italic;
+  }
+  .latest-releases-cover {
+    width: 136px;
+    height: 136px;
+    margin: 10px auto 0;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 136px;
+    max-height: 136px;
+  }
+}
+
 header, footer, .container {
   margin: 0 auto;
   width: 960px;
