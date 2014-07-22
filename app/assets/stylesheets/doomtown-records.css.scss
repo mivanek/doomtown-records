@@ -19,6 +19,7 @@ body:after {
 
 h1 {
   font-family: 'kt-typewriter', sans-serif;
+  text-transform: uppercase;
   width: 724px;
   display: block;
   text-align: center;
@@ -115,6 +116,7 @@ footer {
 
 .highlighted {
   font-family: 'kt-typewriter', sans-serif;
+  text-transform: uppercase;
   background: white;
   color: black;
   height: 21px;
@@ -128,6 +130,7 @@ footer {
   display: block;
   color: #000;
   font-family: 'kt-typewriter', sans-serif;
+  text-transform: uppercase;
   text-align: center;
   margin: 15px 0 15px 35px;
   &:link {
