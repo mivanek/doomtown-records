@@ -16,7 +16,7 @@ class Product < ActiveRecord::Base
   end
 
   def price
-    price_in_cents / 100
+    price_in_cents / 100.0
   end
 
   def full_name

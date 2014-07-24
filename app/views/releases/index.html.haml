@@ -33,7 +33,7 @@
             %span.label-field
               PRICE:
             %span.price-label
-              = release.price
+              = number_with_precision(release.price, precision: 2)
               &euro;
           .add-to-cart
             = link_to line_items_path(product_id: release.id), method: :post do

@@ -2,7 +2,7 @@ class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
   def total_price
-    line_items.collect(&:price).inject(:+)
+    line_items.collect { |item| item.price * item.quantity }.inject(:+)
   end
 
   def add_product(product_id)

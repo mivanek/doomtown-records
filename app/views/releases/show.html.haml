@@ -70,7 +70,7 @@
         %span.highlighted
           PRICE:
         %span.detail-value.price
-          = @release.price
+          = number_with_precision(@release.price, precision: 2)
           &euro;
       .release-details-cart
         = link_to line_items_path(product_id: @release.id), method: :post do

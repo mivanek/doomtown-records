@@ -34,7 +34,7 @@
               %span.label-field
                 PRICE:
               %span.cart.price-label
-                = line_item.total_price
+                = number_with_precision(line_item.total_price, precision: 2)
                 &euro;
             .line-item-remove
               = link_to line_item_path(product_id: line_item.product_id), method: :delete do
@@ -45,7 +45,7 @@
       %span.label-field
         TOTAL:
       %span.cart.price-label
-        = @cart.total_price
+        = number_with_precision(@cart.total_price, precision: 2)
         &euro;
     .check-out
       = image_tag 'check-out.png'
