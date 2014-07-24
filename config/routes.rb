@@ -6,21 +6,10 @@ DoomtownRecords::Application.routes.draw do
   root 'news#index'
 
   resources :news, :only => [:index, :show]
-  resources :releases, :only => [:show, :index] do
-    member do
-      get 'search'
-    end
-    collection do
-      get 'search'
-    end
-  end
+  resources :releases, :only => [:show, :index]
   resources :media, :only => [:index]
   resources :bands, :only => [:index]
-  resources :shop, :only => [:index] do
-    collection do
-      get 'search'
-    end
-  end
+  resources :shop, :only => [:index]
   resources :line_items, :only => [:create, :destroy]
   resources :cart, :only => [:show, :destroy] do
     member do

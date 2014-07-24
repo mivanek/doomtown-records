@@ -4,10 +4,10 @@ module ReleasesHelper
   end
 
   def filter_options
-    [["ALL", "all"], ["VINYL", "vinyl"], ["CD-s", "cd"], ["TAPES", "cs"], ["T-SHIRTS", "shirt"], ["ZINES", "zine"], ["SPECIAL OFFERS", "special"]]
+    [["ALL", ""], ["VINYL", "vinyl"], ["CD-s", "cd"], ["TAPES", "cs"], ["T-SHIRTS", "shirt"], ["ZINES", "zine"], ["SPECIAL OFFERS", "special"]]
   end
 
   def sort_by_options
-    [["NEWEST!!!", "release_date DESC"], ["ALPHABET", "band_name ASC"], ["LOWEST PRICE", "price_in_cents ASC"], ["HIGHEST PRICE", "price_in_cents DESC"]]
+    [["NEWEST!!!", "release_date"], ["ALPHABET", "alphabetically"], ["LOWEST PRICE", "lowest_price"], ["HIGHEST PRICE", "highest_price"]]
   end
 end
