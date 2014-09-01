@@ -18,6 +18,7 @@ class CartController < ApplicationController
 
   def reduce_quantity
     @line_item = @cart.remove_product(@line_item.product.id)
+
     respond_to do |format|
       format.html { redirect_to cart_path(@cart) }
     end
@@ -25,6 +26,7 @@ class CartController < ApplicationController
 
   def increase_quantity
     @line_item = @cart.add_product(@line_item.product.id)
+
     respond_to do |format|
       format.html { redirect_to cart_path(@cart) }
     end

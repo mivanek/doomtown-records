@@ -14,6 +14,7 @@ class LineItemsController < ApplicationController
   def destroy
     product = Product.find(params[:product_id])
     @cart.remove_product(product.id)
+
     respond_to do |format|
       format.html { redirect_to cart_path(@cart.id) }
     end
